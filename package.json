@@ -7,8 +7,9 @@
     "start": "webpack-dev-server --hot --host 0.0.0.0 --port 3000 --config ./webpack.config.js"
   },
   "dependencies": {
+    "fastclick": "^1.0.6",
     "history": "^2.0.1",
-    "lodash": "^3.10.1",
+    "lodash": "^4.6.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.1"

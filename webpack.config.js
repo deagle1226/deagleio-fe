@@ -2,7 +2,7 @@
 
 var path = require('path');
 var autoprefixer = require('autoprefixer');
-var merge = require('lodash/object/merge');
+var merge = require('lodash/merge');
 var webpack = require('webpack')
 var WebpackNotifierPlugin = require('webpack-notifier');
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -123,7 +123,6 @@ const LOADERS = {
 }
 
 const DIR = path.join(__dirname, './src')
-const BUILD_DIR = path.join(__dirname, './.build')
 
 module.exports = {
     entry:[
@@ -135,7 +134,7 @@ module.exports = {
         filname: 'bundle.js'
     },
     resolve: {
-        root:  BUILD_DIR,
+        root:  __dirname,
         extensions: [ '', '.js', '.jsx', '.json' ],
         alias: {
             components: path.join(DIR, 'components'),
@@ -149,7 +148,7 @@ module.exports = {
         hot: true,
         inline: true,
         filename: 'bundle.js',
-        contentBase: BUILD_DIR,
+        contentBase: __dirname,
         historyApiFallback: true,
         stats: {
             chunks: false,
