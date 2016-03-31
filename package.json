@@ -4,7 +4,8 @@
   "description": "Front-end component for deagleio",
   "author": "Dan Eagle",
   "scripts": {
-    "start": "webpack-dev-server --hot --host 0.0.0.0 --port 3000 --config ./webpack.config.js"
+    "start": "webpack-dev-server --hot --host 0.0.0.0 --port 3000 --config ./webpack.config.js",
+    "dist": "webpack --config ./webpack.config.js && cp ./dist ../deagleio/static"
   },
   "dependencies": {
     "fastclick": "^1.0.6",
